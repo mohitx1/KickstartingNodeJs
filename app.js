@@ -1,5 +1,8 @@
-const fs=require('fs');
+const http=require('http');
+const myName='Mohit kr'
 
-fs.writeFileSync('text.txt','This is the text of text.txt file.');
+const server=http.createServer((req,res)=>{
+    console.log(`Hello!, ${myName}`)
+})
 
-console.log('Hello World');
+server.listen(4000);
